@@ -3,7 +3,7 @@ import argparse
 import sys
 
 from CalcRating import CalcRating
-from TextDataReader import TextDataReader
+from YAMLDataReader import YAMLDataReader
 
 
 def get_path_from_arguments(args) -> str:
@@ -16,7 +16,7 @@ def get_path_from_arguments(args) -> str:
 
 def main():
     path = get_path_from_arguments(sys.argv[1:])
-    reader = TextDataReader()
+    reader = YAMLDataReader()
     students = reader.read(path)
     print("Students: ", students)
 
