@@ -3,6 +3,7 @@ import argparse
 import sys
 
 from CalcRating import CalcRating
+from CalcSecondQuartile import CalcSecondQuartile
 from YAMLDataReader import YAMLDataReader
 
 
@@ -22,6 +23,10 @@ def main():
 
     rating = CalcRating(students).calc()
     print("Rating: ", rating)
+
+    second_quartile = (
+        CalcSecondQuartile(students).students_in_second_quartile(rating))
+    print("Students in second quartile: ", second_quartile)
 
 
 if __name__ == "__main__":
